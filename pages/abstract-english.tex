@@ -1,0 +1,36 @@
+\makeatletter
+\begin{tabularx}{\linewidth}{
+  >{\hsize=1.0\hsize}X
+  >{\hsize=0.5\hsize}X
+  >{\hsize=0.5\hsize}X
+}
+  & & \\
+  & & \textbf{Abstract} \\
+  & & \\
+  \hline
+  \multicolumn{1}{|l|}{\small Author} & \multicolumn{1}{|l|}{\small Publication type} & \multicolumn{1}{|l|}{\small Published} \\
+  \multicolumn{1}{|l|}{\@author} & \multicolumn{1}{|l|}{\@publicationtype} & \multicolumn{1}{|l|}{\@date} \\
+  \cline{2-3}
+  \multicolumn{1}{|l|}{} & \multicolumn{1}{|l|}{\small Number of pages} & \multicolumn{1}{|l|}{} \\
+  \multicolumn{1}{|l|}{} & \multicolumn{1}{|l|}{\pageref{LastPage}} & \multicolumn{1}{|l|}{} \\
+  \hline
+\end{tabularx}
+\begin{tabularx}{\linewidth}{|X|}
+  {\small Publication title} \\
+  \textbf{\@title} \\
+  \@subtitle \\
+  \hline
+  {\small Degree, field of study} \\
+  \@degree, \@fieldofstudy \\
+  \hline
+  {\small Abstract} \\
+  \begin{spacing}{1}
+    \setlength{\parskip}{3mm}
+    \input{pages/abstract-english.txt}
+  \end{spacing} \\
+  \hline
+  {\small Keywords} \\
+  \@keywords \\
+  \hline
+\end{tabularx}
+\makeatother

@@ -1,0 +1,36 @@
+\makeatletter
+\begin{tabularx}{\linewidth}{
+  >{\hsize=1.0\hsize}X
+  >{\hsize=0.5\hsize}X
+  >{\hsize=0.5\hsize}X
+}
+  & & \\
+  & & \textbf{Tiivistelmä} \\
+  & & \\
+  \hline
+  \multicolumn{1}{|l|}{\small Tekijä} & \multicolumn{1}{|l|}{\small Julkaisun laji} & \multicolumn{1}{|l|}{\small Julkaistu} \\
+  \multicolumn{1}{|l|}{\@author} & \multicolumn{1}{|l|}{\@altpublicationtype} & \multicolumn{1}{|l|}{\@date} \\
+  \cline{2-3}
+  \multicolumn{1}{|l|}{} & \multicolumn{1}{|l|}{\small Sivumäärä} & \multicolumn{1}{|l|}{} \\
+  \multicolumn{1}{|l|}{} & \multicolumn{1}{|l|}{\pageref{LastPage}} & \multicolumn{1}{|l|}{} \\
+  \hline
+\end{tabularx}
+\begin{tabularx}{\linewidth}{|X|}
+  {\small Julkaisun nimi} \\
+  \textbf{\ifthenelse{\equal{\@alttitle}{\empty}}{\@title}{\@alttitle}} \\
+  \ifthenelse{\equal{\@altsubtitle}{\empty}}{\@subtitle}{\@altsubtitle} \\
+  \hline
+  {\small Tutkinto, koulutusala} \\
+  \@altdegree, \ifthenelse{\equal{\@altfieldofstudy}{\empty}}{\@fieldofstudy}{\@altfieldofstudy} \\
+  \hline
+  {\small Tiivistelmä} \\
+  \begin{spacing}{1}
+    \setlength{\parskip}{3mm}
+    \input{pages/abstract-finnish.txt}
+  \end{spacing} \\
+  \hline
+  {\small Avainsanat} \\
+  \ifthenelse{\equal{\@altkeywords}{\empty}}{\@keywords}{\@altkeywords} \\
+  \hline
+\end{tabularx}
+\makeatother

@@ -1,0 +1,41 @@
+\documentclass{labthesis}
+\university{LAB University of Applied Sciences}
+\author{Firstname Lastname}
+\date{202X}
+
+\title{Thesis Title}
+\subtitle{Subtitle, if any}
+\keywords{keyword, keyword, keyword}
+\publicationtype{Master's thesis}
+\degree{Master of Engineering}
+\fieldofstudy{Information Technology}
+
+\alttitle{Otsikko}
+\altsubtitle{Aliotsikko}
+\altkeywords{avainsana, avainsana, avainsana}
+\altpublicationtype{Opinnäytetyö, YAMK}
+\altdegree{Insinööri (YAMK)}
+\altfieldofstudy{tietotekniikka}
+
+\begin{document}
+  \frontmatter
+  \pagestyle{empty}
+  \include{pages/cover}
+  \include{pages/abstract-english}
+  \begin{otherlanguage}{finnish}
+    \include{pages/abstract-finnish}
+  \end{otherlanguage}
+  \tableofcontents
+
+  \mainmatter
+  \pagestyle{myheadings}
+  \include{chapters/introduction/main}
+  \include{chapters/second-chapter/main}
+  \include{chapters/third-chapter/main}
+
+  \backmatter
+  \begin{raggedright}
+    \bibliography{pages/references}
+  \end{raggedright}
+  \appendix
+\end{document}
